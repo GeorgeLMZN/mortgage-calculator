@@ -5,9 +5,348 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/range-settings.css">
     <title>Mortgage Calculator</title>
 </head>
 <body>
+    <section class="section">
+        <div class="container calculator-container">
+            <h2 class="calculator-heading">Ипотечный калькулятор</h2>
+            <form action="#" class="calculator-form">
+                <div class="calculator-sliders">
+                    <h3 class="sliders-heading">Параметры кредитования</h3>
+                    <div class="sliders-wrapper">
+                        <div class="slider-item">
+                            <div class="slider-values">
+                                <input class="range-text__input" value="5 326 000" type="text" name="credit_sum_count">
+                                <span class="conventional-units">Стоимость дома, руб.</span>
+                            </div>
+                            <input min="1000000" max="6000000" type="range" name="credit_sum" id="">
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-values">
+                                <input class="range-text__input" value="3 326 000" type="text" name="credit_first_pay">
+                                <span class="percents">/15%</span>
+                                <span class="conventional-units">Первый взнос, руб.</span>
+                            </div>
+                            <input min="1000000" max="6000000" type="range" name="credit_first" id="">
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-values">
+                                <input class="range-text__input" value="30" type="text" name="credit_time_count">
+                                <span class="conventional-units">Срок кредита, лет</span>
+                            </div>
+                            <input min="1" max="30" type="range" name="credit_time">
+                        </div>
+                        <div class="credit-sum">
+                            <h4>Сумма кредита</h4>
+                            <div class="credit-sum-values">
+                                <input class="credit-sum__input" value="5 326 000" type="text" name="credit_sum_count">
+                                <span class="conventional-units">руб.</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Получить предложение</button>
+                    </div>
+                </div>
+                <div class="calculator-banks">
+                    <h3 class="banks-heading">Банковские предложения</h3>
+                    <div class="table-headings hide-mobile__info">
+                        <div class="logo-name">
+                           Банк
+                        </div>
+                        <div class="hide-mobile__info">
+                            <span class="table-mobile__info-item">Проц. ставка</span>
+                            <span class="table-mobile__info-item">Срок кредита</span>
+                            <span class="table-mobile__info-item">Первый взнос</span>
+                            <span class="table-mobile__info-item">Платеж в месяц</span>
+                        </div>
+                    </div>
+                    <div class="banks-wrapper">
+                        <label class="bank-item">
+                            <input type="radio" name="bank" id="">
+                            <div class="radio-visible">
+                                <div class="radio-visible__info">
+                                    <div class="logo-name">
+                                        <img src="./assets/img/domrf.svg" alt="">
+                                        <h3>Дом.рф</h3>
+                                    </div>
+                                    <div class="hide-mobile__info">
+                                        <span class="hide-mobile__info-item">от 5.9 %</span>
+                                        <span class="hide-mobile__info-item">до 30 лет</span>
+                                        <span class="hide-mobile__info-item">от 15 %</span>
+                                        <span class="hide-mobile__info-item">16 200</span>
+                                    </div>
+                                </div>
+                                <div class="radio-controll" type="button">
+                                    <img src="./assets/img/arrow.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="radio-percent__info">
+                                <div class="items-wrapper">
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>от 5.9 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Срок кредита</h5>
+                                        <p>30 лет</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Первый взнос</h5>
+                                        <p>от 15 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>16 200 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="bank-item">
+                            <input type="radio" name="bank" id="">
+                            <div class="radio-visible">
+                                <div class="radio-visible__info">
+                                    <div class="logo-name">
+                                        <img src="./assets/img/creditEurope.svg" alt="">
+                                        <h3>КредитЕвропаБанк</h3>
+                                    </div>
+                                    <div class="hide-mobile__info">
+                                        <span class="hide-mobile__info-item">от 5.9 %</span>
+                                        <span class="hide-mobile__info-item">до 30 лет</span>
+                                        <span class="hide-mobile__info-item">от 15 %</span>
+                                        <span class="hide-mobile__info-item">16 200</span>
+                                    </div>
+                                </div>
+                                <div class="radio-controll" type="button">
+                                    <img src="./assets/img/arrow.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="radio-percent__info">
+                                <div class="items-wrapper">
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>от 5.9 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Срок кредита</h5>
+                                        <p>30 лет</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Первый взнос</h5>
+                                        <p>от 15 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>16 200 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="bank-item">
+                            <input type="radio" name="bank" id="">
+                            <div class="radio-visible">
+                                <div class="radio-visible__info">
+                                    <div class="logo-name">
+                                        <img src="./assets/img/sber.svg" alt="">
+                                        <h3>Сбер</h3>
+                                    </div>
+                                    <div class="hide-mobile__info">
+                                        <span class="hide-mobile__info-item">от 5.9 %</span>
+                                        <span class="hide-mobile__info-item">до 30 лет</span>
+                                        <span class="hide-mobile__info-item">от 15 %</span>
+                                        <span class="hide-mobile__info-item">16 200</span>
+                                    </div>
+                                </div>
+                                <div class="radio-controll" type="button">
+                                    <img src="./assets/img/arrow.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="radio-percent__info">
+                                <div class="items-wrapper">
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>от 5.9 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Срок кредита</h5>
+                                        <p>30 лет</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Первый взнос</h5>
+                                        <p>от 15 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>16 200 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="bank-item">
+                            <input type="radio" name="bank" id="">
+                            <div class="radio-visible">
+                                <div class="radio-visible__info">
+                                    <div class="logo-name">
+                                        <img src="./assets/img/domrf.svg" alt="">
+                                        <h3>Дом.рф</h3>
+                                    </div>
+                                    <div class="hide-mobile__info">
+                                        <span class="hide-mobile__info-item">от 5.9 %</span>
+                                        <span class="hide-mobile__info-item">до 30 лет</span>
+                                        <span class="hide-mobile__info-item">от 15 %</span>
+                                        <span class="hide-mobile__info-item">16 200</span>
+                                    </div>
+                                </div>
+                                <div class="radio-controll" type="button">
+                                    <img src="./assets/img/arrow.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="radio-percent__info">
+                                <div class="items-wrapper">
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>от 5.9 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Срок кредита</h5>
+                                        <p>30 лет</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Первый взнос</h5>
+                                        <p>от 15 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>16 200 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="bank-item">
+                            <input type="radio" name="bank" id="">
+                            <div class="radio-visible">
+                                <div class="radio-visible__info">
+                                    <div class="logo-name">
+                                        <img src="./assets/img/postBank.svg" alt="">
+                                        <h3>ПочтаБанк</h3>
+                                    </div>
+                                    <div class="hide-mobile__info">
+                                        <span class="hide-mobile__info-item">от 5.9 %</span>
+                                        <span class="hide-mobile__info-item">до 30 лет</span>
+                                        <span class="hide-mobile__info-item">от 15 %</span>
+                                        <span class="hide-mobile__info-item">16 200</span>
+                                    </div>
+                                </div>
+                                <div class="radio-controll" type="button">
+                                    <img src="./assets/img/arrow.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="radio-percent__info">
+                                <div class="items-wrapper">
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>от 5.9 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Срок кредита</h5>
+                                        <p>30 лет</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Первый взнос</h5>
+                                        <p>от 15 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>16 200 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="bank-item">
+                            <input type="radio" name="bank" id="">
+                            <div class="radio-visible">
+                                <div class="radio-visible__info">
+                                    <div class="logo-name">
+                                        <img src="./assets/img/lokobank.svg" alt="">
+                                        <h3>ЛокоБанк</h3>
+                                    </div>
+                                    <div class="hide-mobile__info">
+                                        <span class="hide-mobile__info-item">от 5.9 %</span>
+                                        <span class="hide-mobile__info-item">до 30 лет</span>
+                                        <span class="hide-mobile__info-item">от 15 %</span>
+                                        <span class="hide-mobile__info-item">16 200</span>
+                                    </div>
+                                </div>
+                                <div class="radio-controll" type="button">
+                                    <img src="./assets/img/arrow.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="radio-percent__info">
+                                <div class="items-wrapper">
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>от 5.9 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Срок кредита</h5>
+                                        <p>30 лет</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Первый взнос</h5>
+                                        <p>от 15 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>16 200 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="bank-item">
+                            <input type="radio" name="bank" id="">
+                            <div class="radio-visible">
+                                <div class="radio-visible__info">
+                                    <div class="logo-name">
+                                        <img src="./assets/img/tinkoff.svg" alt="">
+                                        <h3>Тинькофф</h3>
+                                    </div>
+                                    <div class="hide-mobile__info">
+                                        <span class="hide-mobile__info-item">от 5.9 %</span>
+                                        <span class="hide-mobile__info-item">до 30 лет</span>
+                                        <span class="hide-mobile__info-item">от 15 %</span>
+                                        <span class="hide-mobile__info-item">16 200</span>
+                                    </div>
+                                </div>
+                                <div class="radio-controll" type="button">
+                                    <img src="./assets/img/arrow.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="radio-percent__info">
+                                <div class="items-wrapper">
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>от 5.9 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Срок кредита</h5>
+                                        <p>30 лет</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Первый взнос</h5>
+                                        <p>от 15 %</p>
+                                    </div>
+                                    <div class="info__item">
+                                        <h5>Проц. ставка</h5>
+                                        <p>16 200 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>

@@ -27,6 +27,12 @@ ul {
     margin: 0;
     list-style: none;
 }
+.radio-visible,
+input,
+button,
+a {
+    cursor: pointer;
+}
 
 @media screen and (min-width: 100px) {
     .container {
@@ -38,6 +44,7 @@ ul {
     .calculator-heading {
         font-size: 24px;
         line-height: 30px;
+        margin-top: 40px;
     }
     .calculator-sliders {
         margin-top: 20px;
@@ -83,9 +90,14 @@ ul {
         max-width: 33%;
         font-family: 'Gotham-Medium';
         font-size: 14px;
+        padding: 3px 0;
+        min-width: 75px;
     }
     .range-text__input:focus {
         outline: none;
+    }
+    input[type=radio]:focus ~ .radio-visible {
+        border: 1px solid#3071a9;;
     }
     input[type=range] {
         position: absolute;
@@ -215,7 +227,7 @@ ul {
         align-items: center;
     }
     .slider-item {
-        margin-bottom: 36px;
+        margin-bottom: 25px;
         padding: 24px 30px;
     }
 }
@@ -267,14 +279,15 @@ ul {
     .hide-mobile__info-item {
         margin-right: 25px;
         font-size: 14px;
+        white-space: nowrap;
     }
     .credit-sum {
         display: flex;
         align-items: center;
         width: 100%;
         justify-content: space-between;
-        margin-top: 40px;
-        margin-bottom: 90px;
+        margin-top: 25px;
+        margin-bottom: 53px;
     }
     .credit-sum-values {
         margin: 0;
@@ -292,10 +305,11 @@ ul {
         padding: 44px 20px 60px 20px;
     }
     .slider-item {
-        padding: 30px;
+        padding: 25px 30px;
     }
     .calculator-banks {
         position: relative;
+        margin-left: 5px;
     }
     .table-headings {
         justify-content: space-between;
@@ -315,6 +329,7 @@ ul {
     }
     .sliders-wrapper {
         max-width: 500px;
+        margin-right: 5px;
     }
 }
 @media screen and (min-width: 1200px) {

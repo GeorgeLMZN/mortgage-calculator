@@ -18,25 +18,29 @@
                     <div class="sliders-wrapper">
                         <div class="slider-item">
                             <div class="slider-values">
-                                <input class="range-text__input" value="5 326 000" type="text" name="credit_sum_count">
+                                <input class="range-text__input" value="1 000 000" type="text" name="credit_sum_count">
                                 <span class="conventional-units">Стоимость дома, руб.</span>
                             </div>
-                            <input min="1000000" max="6000000" type="range" name="credit_sum" id="">
+                            <input class="home-price__input" value="1000000" min="1000000" max="60000000" type="range" name="credit_sum" id="">
                         </div>
                         <div class="slider-item">
                             <div class="slider-values">
-                                <input class="range-text__input" value="3 326 000" type="text" name="credit_first_pay">
-                                <span class="percents">/15%</span>
+                                <input class="range-text__input" value="1 000 000" type="text" name="credit_first_pay">
+                                <span class="percents">
+                                <span>/</span>
+                                <input type="text" value="15" class="percents_input" disabled/>
+                                <span>%</span>
+                                </span>
                                 <span class="conventional-units">Первый взнос, руб.</span>
                             </div>
-                            <input min="1000000" max="6000000" type="range" name="credit_first" id="">
+                            <input class="first-payment__input" value="1000000" min="1000000" max="60000000" type="range" name="credit_first" id="">
                         </div>
                         <div class="slider-item">
                             <div class="slider-values">
-                                <input class="range-text__input" value="30" type="text" name="credit_time_count">
+                                <input class="range-text__input" value="1" type="text" name="credit_time_count">
                                 <span class="conventional-units">Срок кредита, лет</span>
                             </div>
-                            <input min="1" max="30" type="range" name="credit_time">
+                            <input class="credit-time__input" value="1" min="1" max="30" type="range" name="credit_time">
                         </div>
                         <div class="credit-sum">
                             <h4>Сумма кредита</h4>
@@ -63,7 +67,7 @@
                     </div>
                     <div class="banks-wrapper">
                         <label class="bank-item">
-                            <input type="radio" name="bank" id="">
+                            <input type="radio" data-percent="21" name="bank" id="">
                             <div class="radio-visible">
                                 <div class="radio-visible__info">
                                     <div class="logo-name">
@@ -105,7 +109,7 @@
                             </div>
                         </label>
                         <label class="bank-item">
-                            <input type="radio" name="bank" id="">
+                            <input type="radio" data-percent="10" name="bank" id="">
                             <div class="radio-visible">
                                 <div class="radio-visible__info">
                                     <div class="logo-name">
@@ -147,7 +151,7 @@
                             </div>
                         </label>
                         <label class="bank-item">
-                            <input type="radio" name="bank" id="">
+                            <input type="radio" data-percent="18" name="bank" id="">
                             <div class="radio-visible">
                                 <div class="radio-visible__info">
                                     <div class="logo-name">
@@ -189,7 +193,7 @@
                             </div>
                         </label>
                         <label class="bank-item">
-                            <input type="radio" name="bank" id="">
+                            <input type="radio" data-percent="25" name="bank" id="">
                             <div class="radio-visible">
                                 <div class="radio-visible__info">
                                     <div class="logo-name">
@@ -231,7 +235,7 @@
                             </div>
                         </label>
                         <label class="bank-item">
-                            <input type="radio" name="bank" id="">
+                            <input type="radio" data-percent="16" name="bank" id="">
                             <div class="radio-visible">
                                 <div class="radio-visible__info">
                                     <div class="logo-name">
@@ -273,7 +277,7 @@
                             </div>
                         </label>
                         <label class="bank-item">
-                            <input type="radio" name="bank" id="">
+                            <input type="radio" data-percent="10" name="bank" id="">
                             <div class="radio-visible">
                                 <div class="radio-visible__info">
                                     <div class="logo-name">
